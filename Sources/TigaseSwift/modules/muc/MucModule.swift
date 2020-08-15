@@ -300,7 +300,7 @@ open class MucModule: Logger, XmppModule, ContextAware, Initializable, EventHand
         case .success(let room):
             return room;
         default:
-            return nil!;
+            return Room(context: self.context, roomJid: roomJid, nickname: "")
         }
     }
     
